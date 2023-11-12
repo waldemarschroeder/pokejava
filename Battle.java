@@ -168,7 +168,7 @@ public class Battle {
       // My PokeJava init
       String userChoicePoke = "Normie";
       if (mode == 0) {
-         //scan.close(); // multiple Battles dont work
+         //scan.close(); // multiple Battles dont work if closed
          try {
             userChoicePoke = PokeJava.names[PokeJava.getRandomNr(0,PokeJava.names.length-1)];
          } catch (Exception e) {
@@ -278,6 +278,6 @@ public class Battle {
       if (enemyPoke.hp == 0){
          System.out.println("Enemy's " + enemyPoke.name + " was defeated");
       }
-      //scan.close(); // multiple Battles dont work
+      //scan.close(); // multiple Battles dont work if closed
    }
 }
