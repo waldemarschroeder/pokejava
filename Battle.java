@@ -152,9 +152,10 @@ class PokeJava {
    }  
 }
 
-public class Main {
+public class Battle {
    public static void main(String[] args) {
-      
+      System.out.println("\nBattle begins\n");
+
       // This reads the input provided by user using keyboard
       Scanner scan = new Scanner(System.in);
       System.out.print("Which Mode do you choose?\n");
@@ -167,7 +168,7 @@ public class Main {
       // My PokeJava init
       String userChoicePoke = "Normie";
       if (mode == 0) {
-         
+         //scan.close(); // multiple Battles dont work
          try {
             userChoicePoke = PokeJava.names[PokeJava.getRandomNr(0,PokeJava.names.length-1)];
          } catch (Exception e) {
@@ -205,7 +206,7 @@ public class Main {
 
       // battle loop
       int count = 1;
-      while (true){
+      while (myPoke.hp != 0 || enemyPoke.hp != 0){
          System.out.println("Round " + count);
          
          // calc myPoke attack stats
@@ -277,5 +278,6 @@ public class Main {
       if (enemyPoke.hp == 0){
          System.out.println("Enemy's " + enemyPoke.name + " was defeated");
       }
+      //scan.close(); // multiple Battles dont work
    }
 }

@@ -3,8 +3,8 @@ Selfmade PokeJava written in Java <br />
 Waldemar Schröder 11.11.2023 <br />
 
 ## Usage
-javac Main.java <br />
-java -cp ./ Main <br />
+javac *.java <br />
+java World <br />
 
 ## Todos:
 More PokeJavas, more types, more attacks <br />
